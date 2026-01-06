@@ -1,0 +1,5 @@
+[workspace]
+members=[
+    "pqcrypto-mlkem",
+]
+resolver="2"

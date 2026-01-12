@@ -1,0 +1,12 @@
+[package]
+name = "pqcrypto-mldsa"
+version = "0.1.0"
+edition = "2024"
+
+
+[dependencies]
+pqcrypto-common = { path = "../pqcrypto-common" }
+
+[build-dependencies]
+cc = { version = "1.0", features = ["parallel"] }
+glob = "0.3.0"

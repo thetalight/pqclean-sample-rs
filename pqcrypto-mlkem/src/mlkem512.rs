@@ -54,7 +54,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_keypair() {
+    fn test_mlkem512() {
         let (pk, sk) = keypair();
 
         let (ss, ct) = encapsulate(&pk);

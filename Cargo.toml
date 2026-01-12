@@ -1,5 +1,7 @@
 [workspace]
 members=[
+    "pqcrypto-common", 
+    "pqcrypto-mldsa",
     "pqcrypto-mlkem",
 ]
 resolver="2"

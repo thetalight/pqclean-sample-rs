@@ -1,0 +1,13 @@
+[package]
+name = "pqcrypto-common"
+version = "0.1.0"
+edition = "2024"
+
+
+links = "pqcrypto_common"
+
+[dependencies]
+getrandom = "0.3"
+
+[build-dependencies]
+cc = { version = "1.0", features = ["parallel"] }

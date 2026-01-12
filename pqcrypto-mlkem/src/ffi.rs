@@ -1,5 +1,8 @@
 use core::ffi::c_int;
-use core::slice;
+
+// ensures we link correctly
+#[allow(unused_imports)]
+use pqcrypto_common::*;
 
 #[link(name = "ml-kem-512_clean")]
 unsafe extern "C" {
@@ -10,11 +13,4 @@ unsafe extern "C" {
         ct: *const u8,
         sk: *const u8,
     ) -> c_int;
-}
-
-#[unsafe(no_mangle)]
-pub unsafe extern "C" fn PQCLEAN_randombytes(buf: *mut u8, len: usize) -> c_int {
-    let buf = unsafe { slice::from_raw_parts_mut(buf, len) };
-    getrandom::fill(buf).expect("RNG Failed");
-    0
 }
